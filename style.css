@@ -1,0 +1,67 @@
+@font-face {
+    font-family: 'BubbleBobble';
+    src: url(./fonts/BubbleBobble-MVpLp.otf);
+}
+
+body {
+    font-family: 'BubbleBobble';
+    margin: 0;
+    padding: 0;
+    background-color: #F9F6EE;
+}
+
+
+#wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+#header {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    padding-top: 5rem;
+    font-size: 70px;
+    color: #28282B;
+}
+
+#container {
+    width: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#menu {
+    display: flex;
+    flex-flow: column wrap;
+    margin: 3rem 0;
+    padding: 0;
+    padding-right: 1rem;
+}
+
+button {
+    margin: 2rem;
+    width: 140px;
+    height: 35px;
+    border-style: solid;
+    border-color: #343434;
+    color: #28282B;
+    font-size: 25px;
+    font-family: 'BubbleBobble';
+}
+
+#grid {
+    border-style: solid;
+    height: 550px;
+    width: 500px;
+    padding: 0;
+    margin: 0;
+}
