@@ -59,9 +59,20 @@ button {
 }
 
 #grid {
+    display: flex;
+    flex: 1;
+    flex-flow: row nowrap;
     border-style: solid;
-    height: 550px;
-    width: 500px;
     padding: 0;
     margin: 0;
+}
+
+#Row {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+#Column {
+    display: flex;
+    flex-flow: column nowrap;
 }

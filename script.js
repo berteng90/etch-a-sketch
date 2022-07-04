@@ -1,19 +1,24 @@
-let Rows = 16;
-let Columns = 16;
-const grid = document.getElementById('grid');
+let gridSize = 16;
+
 
 function generateGrid() {
-    for (x = 1; x <= Rows; i++) {
+    const grid = document.getElementById('grid');
+    for (x = 1; x < gridSize; i++) {
         const gridRow = document.createElement('div');
-        gridRow.classList.add('row');
-        for (y = 1; y <= Columns; y++) {
+        gridRow.setAttribute('id', 'row');
+        gridRow.style.backgroundColor = 'white';
+        for (y = 1; y <= 16; y++) {
             const gridColumn = document.createElement('div');
-            gridColumn.classList.add('column');
-            gridColumn.style.width = '25px';
-            gridColumn.style.widows = '25px';
+            gridColumn.setAttribute('id', 'column');
+            gridColumn.style.width = '50px';
+            gridColumn.style.height = '50px';
             gridColumn.style.backgroundColor = '#36454F';
             gridRow.appendChild(gridColumn);
         }
         grid.appendChild(gridRow);
     }
+}
+
+function updateGrid() {
+
 }
