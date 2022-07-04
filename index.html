@@ -13,17 +13,22 @@
 <body>
     <div id="wrapper">
         <div id="header">
+            <div class="header-wrapper">
             <h1>ETCH A SKETCH!</h1>
+            </div>
         </div>
     </div>
     <div id="container">
         <div id="menu">
-            <button id="color">Pick a Color</button>
+            <div id="colorpicker">
+            <input id="picker" type="color" value="#28282B">
+            </div>
+            <button id="color">Random Mode</button>
             <button id="eraser">Eraser</button>
             <button id="clear">Clear Sketch</button>
             <div id="dragbar">
                 <label id="size">16 x 16</label>
-                <label id="bar">
+                <input id='bar' type="range" min="1" max="5" value="50%"  id="bar">
                     <label id="drag"></label>
                 </label>
             </div>
