@@ -1,4 +1,11 @@
 let gridLength = 16;
+let color='#343434';
+
+
+function updateColor(clr){
+    let color=clr;
+    return color;
+}
 
 
 function generateGrid() {
@@ -19,5 +26,12 @@ function generateGrid() {
 }
 
 function updateGrid() {
-
+    const div=document.querySelectorAll('div');
+    div.forEach(div=>{
+    div.addEventListener('click', function (){
+        console.log('HEHE'); 
+    })
+    })
 }
+
+updateGrid();
