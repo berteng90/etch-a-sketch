@@ -1,9 +1,10 @@
 let gridLength = 16;
-let color='#343434';
+let color = '#343434';
 
 
-function updateColor(clr){
-    let color=clr;
+
+function updateColor(clr) {
+    let color = clr;
     return color;
 }
 
@@ -20,18 +21,14 @@ function generateGrid() {
             gridColumn.style.height = 'auto';
             gridColumn.style.backgroundColor = '#FAF9F6';
             gridRow.appendChild(gridColumn);
+            updateGrid(gridColumn);
         }
         grid.appendChild(gridRow);
     }
 }
 
-function updateGrid() {
-    const div=document.querySelectorAll('div');
-    div.forEach(div=>{
-    div.addEventListener('click', function (){
-        console.log('HEHE'); 
-    })
+function updateGrid(column) {
+    column.addEventListener('click', function () {
+        column.style.backgroundColor = '#28282B';
     })
 }
-
-updateGrid();
