@@ -3,6 +3,7 @@ let color = '#343434';
 let mode = 0;
 let randomColor = Math.floor(Math.random() * 16777215).toString(16);
 let mouseStatus = false;
+let gridSize=[3,9,16,36,64];
 
 function updateMode() {
     let button = document.querySelector('#color');
@@ -20,7 +21,7 @@ function updateMode() {
 function clearGrid() {
     let reset = document.querySelectorAll('#column');
     reset.forEach(div => {
-        div.style.backgroundColor = '#F9F6EE'
+        div.style.backgroundColor = '#FAF9F6'
     })
 
 }
@@ -34,6 +35,14 @@ function updateColor(clr) {
     color = clr;
 }
 
+function updateGrid(size){
+    console.log(size)
+    gridLength=gridSize[size];
+    clearGrid();
+    generateGrid
+}
+
+
 function changeMode() {
     if (mode === 0) {
 
@@ -43,7 +52,8 @@ function changeMode() {
     }
 }
 
-function generateGrid() {
+function generateGrid(size) {
+    
     const grid = document.getElementById('grid');
     for (x = 1; x <= gridLength; x++) {
         const gridRow = document.createElement('div');
@@ -62,11 +72,10 @@ function generateGrid() {
 }
 
 function staticGrid(column) {
-    if (mouseStatus === true) {
-        column.addEventListener('mousemove', () => {
-            column.style.backgroundColor = '#343434';
+       column.addEventListener('mousemove', () => {
+            column.style.backgroundColor = color;
         })
-    }
+   
 
 }
 
