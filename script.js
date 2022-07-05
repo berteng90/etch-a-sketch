@@ -4,8 +4,7 @@ let color = '#343434';
 
 
 function updateColor(clr) {
-    let color = clr;
-    return color;
+    color = clr;
 }
 
 
@@ -29,6 +28,6 @@ function generateGrid() {
 
 function updateGrid(column) {
     column.addEventListener('click', function () {
-        column.style.backgroundColor = '#28282B';
+        column.style.backgroundColor = color;
     })
 }
