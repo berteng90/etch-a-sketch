@@ -1,12 +1,45 @@
 let gridLength = 16;
 let color = '#343434';
+let mode = 0;
+let randomColor = '#000000';
 
+function updateMode() {
+    let button = document.getElementById('color');
+    if (mode === 0) {
+        console.log('test');
+        mode = 1
+    } else if (mode === 1) {
+        mode = 0;
+        button.style.transform = 1;
+    } else {
 
+    }
+}
+
+function clearGrid() {
+    let reset = document.querySelectorAll('#column');
+    reset.forEach(div => {
+        div.style.backgroundColor = '#F9F6EE'
+    })
+
+}
+
+function randomizeColor() {
+    randomColor = '#000000';
+}
 
 function updateColor(clr) {
     color = clr;
 }
 
+function changeMode() {
+    if (mode === 0) {
+
+    }
+    else if (mode === 1) {
+
+    }
+}
 
 function generateGrid() {
     const grid = document.getElementById('grid');
@@ -20,14 +53,22 @@ function generateGrid() {
             gridColumn.style.height = 'auto';
             gridColumn.style.backgroundColor = '#FAF9F6';
             gridRow.appendChild(gridColumn);
-            updateGrid(gridColumn);
+            staticGrid(gridColumn);
+            grid.appendChild(gridRow);
         }
-        grid.appendChild(gridRow);
     }
 }
 
-function updateGrid(column) {
+function staticGrid(column) {
     column.addEventListener('click', function () {
-        column.style.backgroundColor = color;
+        if (mode === 0) {
+            column.style.backgroundColor = color;
+        } else if (mode === 1) {
+            randomizeColor();
+            column.style.backgroundColor = randomColor;
+        }
+
     })
 }
+
+

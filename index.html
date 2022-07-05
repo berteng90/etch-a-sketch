@@ -23,9 +23,9 @@
             <div id="colorpicker">
                 <input id="picker" type="color" value="#28282B" oninput="updateColor(this.value)">
             </div>
-            <button id="color">Random Mode</button>
+            <button id="color" onclick="updateColor()">Random Mode</button>
             <button id="eraser">Eraser</button>
-            <button id="clear">Clear Sketch</button>
+            <button id="clear" onclick="clearGrid()">Clear Grid</button>
             <div id="dragbar">
                 <label id="size">16 x 16</label>
                 <input id='bar' type="range" min="1" max="5" value="50%" id="bar">
