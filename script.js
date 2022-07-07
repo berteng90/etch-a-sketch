@@ -36,9 +36,10 @@ function updateColor(clr) {
 }
 
 function updateGrid(size){
-    let label=document.querySelector('label #gridbar')
-    console.log(label)
+    let gridChange=document.getElementById('gridbar')
+    console.log(gridChange)
     gridLength=gridSize[size];  
+    gridChange.textContent=`${gridLength} X ${gridLength}`
     clearGrid();
     generateGrid();
 }
