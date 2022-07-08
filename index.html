@@ -10,7 +10,7 @@
     <title>Etch A Sketch!</title>
 </head>
 
-<body>
+<body onmousedown="mouseDown()" onmouseup="mouseUp()">
     <div id="wrapper">
         <div id="header">
             <div class="header-wrapper">
@@ -36,7 +36,9 @@
         <div id="grid">
         </div>
     </div>
-    <script>generateGrid()</script>
+    <script>
+    window.onload=generateGrid()
+    </script>
 </body>
 
 </html>

@@ -37,27 +37,17 @@ function updateColor(clr) {
 
 function updateGrid(size){
     let gridChange=document.getElementById('gridbar')
-    console.log(gridChange)
     gridLength=gridSize[size];  
+    console.log(gridLength)
     gridChange.textContent=`${gridLength} X ${gridLength}`
-    clearGrid();
-    generateGrid();
+    clearGrid()
+    generateGrid(gridLength)
 }
 
 
-function changeMode() {
-    if (mode === 0) {
-
-    }
-    else if (mode === 1) {
-
-    }
-}
-
-function generateGrid(size) {
-    
+function generateGrid() {
     const grid = document.getElementById('grid');
-    for (x = 1; x <= gridLength; x++) {
+    for (x = 1; x <=gridLength; x++) {
         const gridRow = document.createElement('div');
         gridRow.setAttribute('id', 'row');
         for (y = 1; y <= gridLength; y++) {
@@ -67,22 +57,29 @@ function generateGrid(size) {
             gridColumn.style.height = 'auto';
             gridColumn.style.backgroundColor = '#FAF9F6';
             gridRow.appendChild(gridColumn);
-            staticGrid(gridColumn);
+            staticGrid(gridColumn);         
         }
         grid.appendChild(gridRow);
     }
 }
 
-function staticGrid(column) {
-       column.addEventListener('mousemove', () => {
-            column.style.backgroundColor = color;
-        })
-   
 
+
+function staticGrid(column) {
+       column.addEventListener('mousemove', () => {  
+           column.style.backgroundColor='#343434'  
+        })        
+}     
+
+function mouseDown(){ 
+    mouseStatus=true
+    console.log(mouseStatus)
 }
 
-function mouseReset() {
-    mouseStatus = false;
+
+function mouseUp(){   
+    mouseStatus=false
+    console.log(mouseStatus)
 }
 
 
