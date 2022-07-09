@@ -57,7 +57,7 @@ function generateGrid() {
             gridColumn.style.height = 'auto';
             gridColumn.style.backgroundColor = '#FAF9F6';
             gridRow.appendChild(gridColumn);
-            staticGrid(gridColumn);         
+            staticGrid(gridColumn);   
         }
         grid.appendChild(gridRow);
     }
@@ -66,10 +66,16 @@ function generateGrid() {
 
 
 function staticGrid(column) {
-       column.addEventListener('mousemove', () => {  
-           column.style.backgroundColor='#343434'  
-        })        
-}     
+    
+        column.addEventListener('mousemove', () => {    
+            if (mouseStatus===true){
+            column.style.backgroundColor='#28282B'
+        }
+        })  
+    }
+          
+   
+               
 
 function mouseDown(){ 
     mouseStatus=true
